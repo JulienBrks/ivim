@@ -128,7 +128,7 @@ set t_vb=
 
 " On Windows, also use .vim instead of vimfiles
 if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+    set runtimepath=$HOME/.vim,$HOME/.vim/bundle/ctrlp.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
 set viewoptions+=slash,unix " Better Unix/Windows compatibility
@@ -164,6 +164,7 @@ if count(g:ivim_bundle_groups, 'ui') " UI setting
 endif
 
 if count(g:ivim_bundle_groups, 'enhance') " Vim enhancement
+    NeoBundle 'kien/ctrlp.vim' " Find file globaly
     NeoBundle 'Raimondi/delimitMate' " Closing of quotes
     NeoBundle 'scrooloose/nerdcommenter' " NERD commenter
     NeoBundle 'tpope/vim-abolish' " Abolish
